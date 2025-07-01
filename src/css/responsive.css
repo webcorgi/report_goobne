@@ -1,0 +1,337 @@
+@charset "UTF-8";
+
+/*
+  Responsive
+*/
+
+/* Global responsive styles */
+@media screen and (max-width: 720px) {
+  .page-section {
+    padding: 30px 10px;
+    width:100%;
+    max-width:100%;
+  }
+  
+  .h3 {
+    font-size: 36px;
+  }
+  
+  .h4 {
+    font-size: 20px;
+  }
+  
+  .h5 {
+    font-size: 22px;
+  }
+  
+  .h6 {
+    font-size: 18px;
+  }
+  
+  .text-xl {
+    font-size: 18px;
+  }
+  
+  .text-lg {
+    font-size: 16px;
+  }
+  
+  .text-base {
+    font-size: 14px;
+  }
+
+  .report-subject{
+    margin-bottom:0;
+  }
+  .enterprise-footer{
+    margin-top:40px;
+  }
+  
+  /* Tables responsive */
+  .table-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .table-wrapper-y-scroll {
+    max-height: 500px;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .table-th, 
+  .table-td {
+    font-size: 12px;
+    padding: 5px 0;
+  }
+  .bg-red .table-head .table-th{
+    font-size:12px;
+  }
+  .table-layout-chart .table-td:nth-child(1){
+    max-width:auto;
+  }
+
+  /* section2 */
+  .page-section.index{
+    padding:40px 10px;
+    height:650px;
+  }
+  .page-section.index h3{
+    font-size:24px;
+  }
+  .index-title p:first-child{
+    font-size:20px;
+  }
+  .index-title p:last-child{
+    font-size:14px;
+  }
+  .index-title p:last-child{
+    font-size:14px;
+  }
+  .index-list{
+    margin-top:20px;
+  }
+  .index-list > ul > li .index-depth1{
+    font-size:14px;
+    width:110px;
+  }
+  .index-list > ul{
+    gap:0;
+  }
+  .index-list > ul > li > ul{
+    margin-top:0;
+  }
+  .index-list > ul > li > ul > li{
+    font-size:14px;
+    margin-bottom:5px;
+  }
+  .chart-canvas{
+    width:L
+  }
+  .overview-dt{
+    width:80px;
+  }
+  .overview-dt,
+  .overview-dd {
+    padding:10px 0;
+    font-size:12px;
+  }
+  .page-title{
+    margin-bottom:20px;
+    padding-bottom:15px;
+    font-size:20px;
+  }
+  .page-title .num{
+    font-size:30px;
+  }
+  .h5{
+    font-size:17px;
+  }
+  .col-subj{
+    flex:4;
+    width:100%;
+  }
+  .table-td:last-child{
+    width:calc(100% - 77px);
+  }
+  .col-nowrap {
+    white-space: wrap;
+  }
+  .category-title{
+    font-size:14px;
+  }
+  .news-source{
+    width:50px;
+  }
+  .news-item{
+    display:block;
+    padding:5px 10px;
+  }
+  .news-meta{
+    justify-content:flex-end;
+    margin-top:5px;
+  }
+  .news-title{
+    font-size:12px;
+    margin-bottom:5px;
+  }
+  .news-content{
+    margin-top:5px;
+  }
+  .news-section{
+    margin-top:0;
+  }
+  .news-category{
+    margin-bottom:0;
+  }
+  .chart-section-wrap{
+    display:block;
+  }
+  .chart-section.section-2,
+  .chart-section.section-1{
+    width:100%;
+  }
+  .chart-section.section-2{
+    margin-top:0;
+  }
+  .data-analysis-section{
+    padding:20px 10px;
+  }
+  .list li{
+    font-size:12px;
+  }
+  .data-analysis-content .list > li{
+    margin-bottom:0;
+    padding-left:0;
+  }
+  .chart-row {
+    display:block;
+  }
+  .chart-column-line,
+  .chart-column-doughnut {
+    width:100%;
+  }
+  .chart-legend.interactive .legend-item{
+    width:50%;
+  }
+  .data-analysis-content .gray-list li {
+    margin-top:0;
+  }
+  .data-analysis-title h6{
+    font-size:14px;
+  }
+  .data-analysis-section {
+    font-size:12px;
+  }
+  .chart-section-title{
+    margin-bottom:10px;
+  }
+  .chart-container-wrapper{
+    padding:20px 10px;
+  }
+  .media-cell{
+    font-size:12px;
+    padding:10px 2px;
+  }
+  .media-table-row.header .media-cell{
+    padding:10px 0;
+  }
+  .media-table{
+    overflow-x:auto;
+    width:100%;
+  }
+  .chart-container-wrapper{
+    box-shadow:none;
+    padding:0 0 20px;
+  }
+  .chart-title.brand-title,
+  .consumer-interest-chart .data-analysis-section{
+    width:100%;
+  }
+  .chart-title.brand-title{
+    margin-bottom:0;
+    padding-bottom:0;
+  }
+  .mention-content{
+    font-size:11px;
+  }
+  .chart-title{
+    font-size:20px;
+  }
+  .media-insight-section{
+    margin-top:0;
+  }
+  .chart-column-line-chart {
+    width:100%;
+  }
+  .sentiment-chart-row.row{
+    display:block;
+  }
+  .col-p65,
+  .col-p35{
+    width:100%;
+  }
+  .col-p65 {
+    margin-top:20px;
+  }
+  .sentiment-legend-item{
+    margin-right:0;
+  }
+  .sentiment-legend-container{
+    gap:5px;
+  }
+  .sentiment-legend-item {
+    padding:8px 5px;
+    font-size:12px;
+  }
+  .sentiment-analysis-section{
+    margin-top:15px;
+    padding:15px 10px;
+  }
+  .chart-title.brand-title{
+    font-size:17px;
+  }
+  .page-section .h5{
+    margin-bottom:10px;
+  }
+  .goobne-table-td-label,
+  .goobne-table-th-label{
+    width:80px;
+    font-size:12px;
+  }
+  .goobne-table-brand-name {
+    font-size:14px;
+  }
+  .goobne-table-td-content ul{
+    margin:0;
+  }
+  .goobne-table-td-content li {
+    font-size:12px;
+  }
+  .goobne-nested-table td{
+    font-size:10px;
+    padding:5px 2px;
+  }
+  .goobne-table-td{
+    padding:10px 5px;
+  }
+  .goobne-swot-letter{
+    font-size:12px;
+  }
+  .goobne-swot-content li {
+    font-size:12px;
+  }
+  .goobne-swot-content strong {
+    font-size:12px;
+  }
+  .rank-column{
+    width:50px !important;
+  }
+  .column-header{
+    font-size:12px !important;
+  }
+  .column-header span {
+    font-size:12px;
+  }
+  .competition-column{
+    padding:10px 5px !important;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+  .competition-title-row{
+    padding:5px 0 !important;
+  }
+  .competition-column span {
+    font-size:12px;
+  }
+  .rank-badge{
+    width:25px !important;
+    height:25px !important;
+    font-size:12px !important;
+  }
+  .company-bullet.secondary,
+  .company-bullet.primary{
+    display:none;
+  }
+}

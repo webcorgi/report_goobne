@@ -1,0 +1,717 @@
+/* Section1 specific print styles */
+@media print {
+  /* Apply to entire document for complete color support */
+  html, body {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
+
+  .section1-print {
+    height: 297mm !important; /* A4 height */
+    min-height: 297mm !important;
+    width: 210mm !important; /* A4 width */
+    margin: 0 !important;
+    padding: 95px 70px 0 !important;
+    page-break-after: always;
+    break-after: page;
+    print-color-adjust: exact !important;
+    -webkit-print-color-adjust: exact !important;
+    color-adjust: exact !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+    position: relative !important;
+  }
+
+  /* Ensure the background and gradients print correctly */
+  .section1-print {
+    background: linear-gradient(135deg, #00193c 0%, #05386b 40%, #007991 100%) !important;
+    /* Fallback for browsers that don't support print gradients */
+    background-color: #00193c !important;
+  }
+
+  /* Ensure all background elements print */
+  .section1-print > div {
+    print-color-adjust: exact !important;
+    -webkit-print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
+
+  /* Ensure the cover content is positioned properly on print */
+  .section1-print .cover-inner {
+    height: 100% !important;
+    position: relative !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    bottom: 0 !important;
+    z-index: 5 !important;
+  }
+
+  /* Position the logo and title for better print layout */
+  .section1-print .cover-logo {
+    margin-bottom: 40px !important;
+  }
+
+  .section1-print .cover-title {
+    margin-top: 40px !important;
+  }
+
+  /* Ensure bottom content is in the right position */
+  .section1-print .cover-desc {
+    position: fixed !important; /* 고정 위치로 변경 */
+    bottom: 70px !important; /* 더 낮게 조정 */
+    left: 0 !important;
+    right: 0 !important;
+    transform: none !important; /* transform 제거 */
+    width: 100% !important;
+    text-align: center !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    z-index: 9999 !important; /* 최상위 z-index */
+    background-color: transparent !important;
+  }
+
+  /* Fix for text rendering in print */
+  .section1-print .cover-title p,
+  .section1-print .cover-desc p {
+    color: white !important;
+    text-shadow: none !important;
+  }
+
+  /* 화면 전용 로고 숨기기 */
+  .screen-only-logo {
+    display: none !important;
+  }
+
+
+  /* Cover description specific print adjustments */
+  .section1-print .cover-desc .bi-vaiv {
+    display: block !important;
+    margin: 0 auto 10px !important;
+    width: 82px !important;
+    height: 32px !important;
+    position: relative !important;
+    background-color: transparent !important;
+  }
+  /* Force specific A4 page size and remove margins */
+  @page {
+    size: 210mm 297mm; /* A4 size */
+    margin: 0;
+  }
+}
+
+/* Additional rule for landscape printing */
+@media print and (orientation: landscape) {
+  .section1-print {
+    height: 210mm !important; /* A4 width */
+    width: 297mm !important; /* A4 height */
+  }
+
+  .section1-print .cover-desc {
+    bottom: 40px !important; /* 가로 모드에서는 더 위로 조정 */
+  }
+
+  @page {
+    size: 297mm 210mm; /* A4 landscape */
+    margin: 0;
+  }
+} 
+
+/* Normal display (non-print) styles */
+.cover-inner {
+  position: relative;
+  z-index: 5;
+  bottom: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.cover-inner-print {
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
+}
+
+.cover-desc {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  text-align: center;
+  z-index: 10;
+}
+
+/* SVG 로고 스타일 */
+.bi-vaiv svg {
+  display: block;
+  width: 100%;
+}
+
+.bi-vaiv svg path {
+  fill: white;
+}
+
+/* Section1 Cover Styles */
+
+/* Main cover section container */
+.page-section.cover.section1-print {
+  position: relative;
+  height: 1019px;
+  padding: 95px 70px 0;
+  overflow: hidden;
+}
+
+/* Background grid */
+.background-grid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(255,255,255,0.07) 1px, transparent 1px),
+              linear-gradient(to bottom, rgba(255,255,255,0.07) 1px, transparent 1px);
+  background-size: 30px 30px;
+  z-index: 1;
+}
+
+/* Diagonal stripe elements */
+.diagonal-stripe-main {
+  position: absolute;
+  top: -10%;
+  right: -30%;
+  width: 120%;
+  height: 140%;
+  background: linear-gradient(135deg, transparent 30%, rgba(0, 111, 255, 0.6) 70%, rgba(0, 210, 255, 0.8) 100%);
+  transform: rotate(-20deg);
+  z-index: 2;
+}
+
+.diagonal-stripe-secondary {
+  position: absolute;
+  top: -10%;
+  right: -30%;
+  width: 100%;
+  height: 140%;
+  background: linear-gradient(135deg, transparent 35%, rgba(0, 161, 255, 0.4) 75%, rgba(0, 210, 255, 0.6) 100%);
+  transform: rotate(-15deg);
+  z-index: 2;
+}
+
+.diagonal-accent {
+  position: absolute;
+  bottom: -20%;
+  right: -10%;
+  width: 70%;
+  height: 60%;
+  background: linear-gradient(135deg, transparent, rgba(0, 111, 255, 0.3));
+  transform: rotate(25deg);
+  z-index: 3;
+}
+
+/* Track/Running Lane Elements */
+.track-line-large {
+  position: absolute;
+  bottom: 10%;
+  right: -30%;
+  width: 120%;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.8);
+  transform: rotate(-20deg);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+  z-index: 3;
+}
+
+.track-line-medium {
+  position: absolute;
+  bottom: 15%;
+  right: -30%;
+  width: 120%;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.6);
+  transform: rotate(-20deg);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+  z-index: 3;
+}
+
+.track-line-small {
+  position: absolute;
+  bottom: 20%;
+  right: -30%;
+  width: 120%;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.4);
+  transform: rotate(-20deg);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  z-index: 3;
+}
+
+/* Accent elements */
+.accent-circle-large {
+  position: absolute;
+  top: 5%;
+  right: 10%;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 210, 255, 0.3);
+  box-shadow: 0 0 30px rgba(0, 210, 255, 0.2);
+  z-index: 2;
+}
+
+.accent-circle-small {
+  position: absolute;
+  top: 30%;
+  right: 25%;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgba(0, 210, 255, 0.2);
+  box-shadow: 0 0 30px rgba(0, 210, 255, 0.2);
+  z-index: 2;
+}
+
+/* Motion lines SVG */
+.motion-lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+}
+
+/* Logo styling */
+.cover-logo {
+  width: 155px;
+}
+
+.logo-image {
+  filter: brightness(0) invert(1);
+  width: 100%;
+}
+
+/* Title styling */
+.cover-title {
+  margin-top: 40px;
+}
+
+.cover-title p:first-child {
+  color: #fff;
+  font-size: 47.25px;
+  font-weight: 700;
+  letter-spacing: -1.89px;
+  text-shadow: 0 0 15px rgba(0, 210, 255, 0.5);
+}
+
+.cover-title p:last-child {
+  color: #fff;
+  font-size: 27px;
+  font-weight: 500;
+  letter-spacing: -1.08px;
+  margin-top: 14px;
+  text-shadow: 0 0 10px rgba(0, 210, 255, 0.3);
+}
+
+/* Bottom description area */
+.cover-desc {
+  position: absolute;
+  left: 50%;
+  bottom: 22px;
+  transform: translateX(-50%);
+  width: 100%;
+  text-align: center;
+  z-index: 10;
+}
+
+.cover-desc p {
+  color: #fff;
+  font-size: 14px;
+  line-height: 140%;
+}
+
+/* Screen only logo styling */
+.screen-only-logo {
+  width: 82px;
+  margin: 0 auto 11px;
+}
+
+.screen-only-logo img {
+  width: 100%;
+}
+
+/* SVG logo styles */
+.bi-vaiv svg {
+  display: block;
+  width: 100%;
+}
+
+.bi-vaiv svg path {
+  fill: white;
+}
+
+/* Custom print styles */
+@media print {
+  .section1-print {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  
+  .screen-only-logo {
+    display: none;
+  }
+  
+  .cover-inner-print {
+    break-after: page;
+    page-break-after: always;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .page-section.cover.section1-print {
+    height:500px;
+    padding:50px 20px;
+  }
+  .cover-desc p{
+    font-size:12px;
+    padding:0 20px;
+  }
+  .cover-title p:first-child{
+    font-size:30px;
+  }
+  .cover-title p:last-child{
+    font-size:16px;
+  }
+  .logo-image{
+    max-width:100px;
+  }
+}
+
+
+
+
+
+/*  */
+/* Enterprise-Grade Cover Design */
+
+:root {
+  --enterprise-navy: #003366;
+  --corporate-blue: #0052cc;
+  --deep-blue: #003380;
+  --light-blue: #0077ff;
+  --neutral-gray: #f8f9fa;
+  --text-primary: #1a1a1a;
+  --text-secondary: #4a4a4a;
+  --text-tertiary: #888888;
+}
+
+/* Main Container */
+.page-section.cover.section1-print {
+  position: relative;
+  height: 1019px;
+  padding: 53px 56px;
+  overflow: hidden;
+}
+
+/* Enterprise Background */
+.enterprise-gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(248, 249, 250, 0.7) 0%, rgba(255, 255, 255, 0.95) 40%, #ffffff 100%);
+  z-index: 1;
+}
+
+.corporate-grid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    linear-gradient(to right, rgba(0, 0, 0, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.02) 1px, transparent 1px);
+  background-size: 40px 40px;
+  z-index: 2;
+}
+
+/* Professional Design Elements */
+.professional-line.vertical {
+  position: absolute;
+  top: 80px;
+  left: 60px;
+  width: 1px;
+  height: 100px;
+  background: var(--corporate-blue);
+  z-index: 5;
+}
+
+.professional-line.horizontal {
+  position: absolute;
+  top: 40px;
+  left: 20%;
+  width: 60px;
+  height: 1px;
+  background: var(--corporate-blue);
+  z-index: 5;
+}
+
+.accent-circle.large {
+  position: absolute;
+  top: 5%;
+  right: 8%;
+  width: 180px;
+  height: 180px;
+  border: 1px solid rgba(0, 82, 204, 0.1);
+  border-radius: 50%;
+  z-index: 3;
+}
+
+.accent-circle.small {
+  position: absolute;
+  top: 15%;
+  right: 25%;
+  width: 80px;
+  height: 80px;
+  background: rgba(0, 82, 204, 0.03);
+  border-radius: 50%;
+  z-index: 3;
+}
+
+/* Wave Pattern */
+.corporate-wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1019px;
+  z-index: 4;
+}
+
+/* Enterprise Container */
+.enterprise-container {
+  position: relative;
+  z-index: 10;
+  height: 100%;
+  max-width: 100%;
+}
+
+/* Header */
+.corporate-header {
+  margin-bottom: 40px;
+}
+
+.logo-section {
+  position: relative;
+}
+
+.enterprise-logo {
+  width: 154px;
+  height: auto;
+}
+
+/* Content Area */
+.content-area {
+}
+
+/* Report Info */
+
+.report-year {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--corporate-blue);
+  letter-spacing: -1px;
+}
+
+.report-divider {
+  margin: 0 16px;
+  color: var(--text-tertiary);
+  font-size: 28px;
+  font-weight: 300;
+}
+
+.report-period {
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  letter-spacing: -0.5px;
+}
+
+/* Corporate Title */
+.corporate-title {
+  font-size: 48px;
+  font-weight: 900;
+  line-height: 1.2;
+  margin-bottom: 14px;
+  color:#fff;
+}
+
+/* Report Subject */
+.report-subject {
+  align-items: center;
+  margin-bottom: 150px;
+}
+
+.subject-line {
+  width: 50px;
+  height: 2px;
+  background: var(--corporate-blue);
+  margin-right: 20px;
+}
+
+.subject-text {
+  font-size: 27px;
+  font-weight: 600;
+  color:#fff;
+}
+.subject-text2 {
+  font-size: 27px;
+  font-weight: 500;
+  color:#fff;
+}
+.report-details {
+  display:flex;
+  color:#fff;
+  border-bottom:1px solid rgba(255,255,255,1);
+  padding:15px 0;
+}
+.report-details-wrap{
+  border-top:1px solid rgba(255,255,255,1);
+  height:420px;
+}
+.report-details .details-label  {
+  flex-shrink: 0;
+  width:120px;
+  font-size:16px;
+}
+.report-details .details-text{
+  font-size:16px;
+  word-break:keep-all;
+}
+
+.summary-text {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-family: 'SF Pro Display', sans-serif;
+}
+
+/* Footer */
+.enterprise-footer {
+}
+
+.footer-content {
+  width:100%;
+  padding-top: 60px;
+  border-top: 1px solid rgba(26, 26, 26, 0.08);
+}
+
+.vaiv-section {
+  display: flex;
+  align-items: center;
+}
+
+.vaiv-logo-container {
+  width: 90px;
+}
+
+.vaiv-enterprise {
+  width: 100%;
+  opacity: 0.9;
+}
+
+.vaiv-print {
+  display: none;
+}
+
+.vaiv-text {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--enterprise-navy);
+  letter-spacing: 1px;
+}
+
+.footer-info {
+}
+
+.footer-note {
+  font-size: 12px;
+  color: var(--text-tertiary);
+  letter-spacing: -0.2px;
+  margin-top:10px;
+}
+
+/* Print Styles */
+@media print {
+  html, body {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
+
+  .section1-print {
+    height: 297mm !important;
+    width: 210mm !important;
+    margin: 0 !important;
+    padding: 80px 100px !important;
+    page-break-after: always;
+    background: #ffffff !important;
+  }
+
+  .vaiv-logo-container {
+    display: none !important;
+  }
+
+  .vaiv-print {
+    display: block !important;
+  }
+
+  @page {
+    size: 210mm 297mm;
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer-note,
+  .enterprise-footer{
+    margin-top:40px;
+  }
+  .page-section.cover.section1-print {
+    height:700px;
+    padding: 40px 30px;
+  }
+  
+  .corporate-header {
+    margin-bottom: 80px;
+  }
+  
+  .content-area {
+    padding-left: 0;
+  }
+  
+  .corporate-title {
+    font-size: 30px;
+  }
+  
+  .subject-text {
+    font-size: 18px;
+  }
+  
+  .footer-content {
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+  }
+  
+  .footer-info {
+    text-align: left;
+  }
+}
