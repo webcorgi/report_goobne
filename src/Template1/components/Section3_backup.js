@@ -1,41 +1,61 @@
 import BarChart from "../chart/section3/BarChart";
 
 
-export default function Section3() {
+export default function Section2() {
     return (
         <div className="page-section">
             <h4 className="h4 page-title">
                 <span className="num">I.</span>
-                 주요 이슈
+                주간 주요 이슈
 
                 <p className="page-title-date">
                     <b>분석일자</b>
                     <span>2025.06.16 ~ 2025.06.22</span>
                 </p>
             </h4>
-            <h5 className="page-sub-title">1. 산업 주요 이슈</h5>
-            <ul className="issue-list">
-                <li>
-                    <span>1. </span>
-                    <p>배달앱 수수료 부담 및 규제 논의:   치킨 프랜차이즈는 매출의 30~40%가 배달앱 수수료, 광고비 등으로 소모돼 "팔수록 적자"라는 점주 불만이 커지고, 수수료 상한제 등 제도 개선 요구가 확산.</p>
-                </li>
-                <li><span>2. </span>
-                    <p>원재료·인건비 상승과 외식 물가 인상 압박 : 닭고기 등 원재료와 인건비 상승으로 치킨 가격 인상 압력이 커지며, 외식 물가가 전체 물가보다 빠르게 올라 소비 위축과 자영업자 경영난이 심화.</p>
-                </li>
-                <li><span>3. </span>
-                    <p>프랜차이즈 유통마진(차액가맹금) 소송 확산 :  피자헛 점주 승소 이후 치킨 프랜차이즈 등에서도 유통마진 반환 소송이 확산, 최대 1조원대 손해배상 가능성이 제기되며 본사-점주 간 신뢰와 투명성 요구가 커짐</p>
-                </li>
-                <li><span>4. </span>
-                    <p>포화상태와 폐점률 증가, 경쟁 심화 :  국내 치킨집 수는 약 3만 개로 포화 상태이며, 폐점률이 10%를 넘고 30%가 연매출 1억 미만으로 수익성 악화와 브랜드 간 경쟁이 더욱 치열해지고 있음</p>
-                </li>
-                <li><span>5. </span>
-                    <p>브랜드 다각화·글로벌 진출 및 트렌드 변화 : BBQ, 굽네 등 대형 프랜차이즈는 다양한 외식 카테고리와 해외 시장으로 사업을 확장하며, 현지화 전략과 트렌드 변화에 적극 대응하고 있음</p>
-                </li>
-            </ul>
+            <div className="data-analysis-section">
+                <div className="overview-dl">
+                    <div className="overview-dt">경쟁사</div>
+                    <div className="overview-dd">
+                        (1차 경쟁사) bhc, 교촌 치킨
+                    </div>
+                </div>
+                <div className="overview-dl">
+                    <div className="overview-dt">
+                        분석 기간
+                    </div>
+                    <div className="overview-dd">
+                        2025.03.10 ~ 2025.03.16
+                    </div>
+                </div>
+                <div className="overview-dl">
+                    <div className="overview-dt">
+                        분석 키워드
+                    </div>
+                    <div className="overview-dd">
+                        굽네치킨, 교촌, BHC, 프렌차이즈, 프렌차이즈치킨브랜드, 치킨, 치킨브랜드, 치킨맛집, 맛있는치킨, 추천하는 치킨, 연애인이 추천하는 치킨
+                    </div>
+                </div>
+                <div className="overview-dl">
+                    <div className="overview-dt">대상 매체</div>
+                    <div className="overview-dd">
+                        뉴스( 네이버,다음), 유튜브, 인스타그램, 트위터(X), 커뮤니티 (네이버, 다음 카페, 개별 온라인 커뮤니티), 블로그(네이버)
+                    </div>
+                </div>
+                <div className="overview-dl">
+                    <div className="overview-dt">데이터 출처</div>
+                    <div className="overview-dd">
+                        TM2 (네이버 뉴스), 방속TCI 지수, 맛집데이터, 브랜드 지수, VISS 지수, SNS 쇼핑 트렌드, 식품 도메인 트렌드, BRI 지수,
+                        맛집 데이터, 국내 주요 증권사 분석 리포트, 국재 상장사 재무 데이터, 국내 상장사 잠정공시/감사 보고서 데이터, 국내 상장사 주요 지표
+                        데이터
+                    </div>
+                </div>
+            </div>
 
             <h4 className="h4 page-title mt-40">
                 {/* <span className="num">Ⅱ.</span> */}
                 주간 하이라이트</h4>
+            <h5 className="h5">1. 주요 이슈</h5>
 
             <div className="table-layout bg-red">
                 <div className="table-head">

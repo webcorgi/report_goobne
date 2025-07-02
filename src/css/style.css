@@ -16,7 +16,7 @@ body {
     sans-serif;
   line-height: 1.5;
   letter-spacing: -0.4px;
-  font-size:14px;
+  font-size:16px;
 }
 div,
 span,
@@ -886,7 +886,7 @@ hr.breakAfter {
   -moz-box-shadow: 10px 10px 28px -2px #c1c1c169;
 }
 .page-section {
-  padding: 50px 40px;
+  padding: 40px;
   height: 297mm;
   width: 210mm; /* A4 width */
   margin: 0 auto;
@@ -956,21 +956,63 @@ hr.breakAfter {
   }
 }
 
+.page-section.index .page-title {
+  font-size:32px;
+}
 .page-title{
   border-top:4px solid var(--primary);
   padding-top:20px;
+  font-size:24px;
 }
 
 .page-title .num {
-  font-size: 52px;
+  font-size: 32px;
   font-weight: 900;
   position: relative;
   display: inline-block;
   z-index: 1;
+  padding-right:10px;
+  line-height:1;
+  top:2px;
 }
-
-
-
+.page-title-date {
+  position:absolute;
+  right:0;
+  top:20px;
+}
+.page-title-date b {
+  font-size:14px;
+}
+.page-title-date span {
+  font-size:14px;
+  color:#495056;
+  font-weight:400;
+  padding-left:10px;
+}
+.page-sub-title{
+  color:var(--primary);
+  font-size:16px;
+  font-weight:600;
+  padding:8px 15px;
+  background:#E84E3D1A;
+  margin-top:30px;
+}
+.issue-list {
+  list-style-type:none;
+  padding:10px 0;
+}
+.issue-list li {
+  padding:10px 0;
+  border-bottom:1px solid #DEE1E6;
+  display:flex;
+  justify-content:flex-start;
+  padding-left:15px;
+}
+.issue-list li span {
+  display:inline-block;
+  width:40px;
+  font-weight:600;
+}
 .page-title.blue {
   background: linear-gradient(90deg, var(--dark-blue) 0%, var(--primary) 100%);
   -webkit-background-clip: text;
@@ -1236,7 +1278,7 @@ hr.breakAfter {
 /* 목차 */
 .page-section.index {
   padding: 40px;
-  background: var(--background);
+  background: #fff;
 }
 .page-section.index h3 {
   line-height: normal;
@@ -1271,13 +1313,18 @@ hr.breakAfter {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 0;
   counter-reset: item;
 }
 .index-list > ul > li {
   list-style-type: none;
   display:flex;
   justify-content:flex-start;
+  border-top:1px solid #DEE1E6;
+  padding:15px 0;
+}
+.index-list > ul > li:last-child {
+  border-bottom:1px solid #DEE1E6;
 }
 .index-list > ul > li .index-depth1 {
   width: 200px;
@@ -1288,7 +1335,6 @@ hr.breakAfter {
   width:180px;
 }
 .index-list > ul > li .index-depth1:before {
-  content: counters(item, ".", upper-roman) ". ";
   counter-increment: item;
   display: inline-block;
   vertical-align: middle;
@@ -1298,15 +1344,24 @@ hr.breakAfter {
   color: var(--primary);
 }
 .index-list > ul > li > ul {
-  list-style-type: decimal;
   flex: 1 1 calc(100% - 200px);
-  padding-left: 100px;
-  margin-top: 10px;
+  padding-left: 0px;
+  line-height: 1.8;
 }
 .index-list > ul > li > ul > li {
-  font-size: 18px;
+  font-size: 16px;
   letter-spacing: -0.72px;
-  margin-bottom:10px;
+}
+.index-list > ul > li > ul {
+  list-style-type: none;
+}
+.index-list > ul > li > ul > li:before {
+  content: counters(item, ".", upper-roman) ". ";
+  counter-increment: item;
+  display: inline-block;
+  vertical-align: middle;
+  font-weight: 600;
+  margin-right: 5px;
 }
 .index-list.blue > ul > li .index-depth1,
 .index-list.blue > ul > li .index-depth1:before {
@@ -1316,10 +1371,34 @@ hr.breakAfter {
 .index-list.black > ul > li .index-depth1:before {
   color: var(--black);
 }
+.index-keywords-table {
+  width:100%;
+}
+.index-keywords,
+.index-keywords-table table {
+  width:100%;
+}
+.index-keywords-table th {
+  background-color: var(--tablethBg);
+  color: var(--primary);
+  padding:10px;
+}
+.index-keywords-table td {
+  vertical-align: top;
+  font-size:14px;
+  padding:10px;
+  line-height:2;
+}
+.index-keywords-table td:nth-child(1) {
+  font-weight:600;
+}
+.index-keywords-table td:nth-child(2) {
+  line-height:1.5;
+}
 
 /* 개요 */
 .page-section.overview {
-  height: 1019px;
+  deight: 1019px;
 }
 .overview-dl {
   display: flex;

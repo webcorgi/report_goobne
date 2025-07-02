@@ -42,6 +42,7 @@ const Template1 = () => {
                     gray01: '#dee1e6',
                     gray02: '#626262',
                     newsTitleBg:'linear-gradient(to right, var(--bgPrimary), rgba(242, 243, 245, 0.5))',
+                    tablethBg:'#FCE4E2',
                     // 차트 테마 컬러
                 };
                 setTheme(colors);
