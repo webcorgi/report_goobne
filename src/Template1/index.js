@@ -13,6 +13,8 @@ import Section9 from "./components/Section9";
 import Section10 from "./components/Section10";
 import { useRecoilState } from 'recoil';
 import { themeState } from '../recoil/atom';
+import Section3_3 from './components/Section3_3';
+import Section3_4 from './components/Section3_4';
 
 
 const Template1 = () => {
@@ -82,7 +84,9 @@ const Template1 = () => {
                     <Section2/>
                     <Section3/>
                     <Section3_2/>
-                    {/* <Section4/> */}
+                    <Section3_3/>
+                    <Section3_4/>
+                    <Section4/>
                     <Section5/>
                     <Section6/>
                     <Section7/>

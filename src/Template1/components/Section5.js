@@ -10,28 +10,7 @@ export default function Section5() {
             </h4>
             <h5 className="h5">1. 가시성 및 인지도 분석</h5>
             
-            <div className="chart-section-wrap">
-                <div className="chart-section section-1">
-                        <div className="category-title">
-                        총 언급량
-                    </div>
-                    <div className="chart-container-wrapper blue-theme">
-                        <HighlightedLineChart />
-                    </div>
-                    <div className="chart-accent-line blue-theme"></div>
-                </div>
-
-                <div className="chart-section section-2">
-                    <div className="category-title">
-                    총 언급량 구성 비율
-                    </div>
-                    <div className="chart-container-wrapper">
-                        <PieChart />
-                    </div>
-                    <div className="chart-accent-line"></div>
-                </div>
-            </div>
-
+         
             {/* 언급량 데이터 분석 결과 */}
             <div className="category-title">
                 언급량 데이터 분석 결과

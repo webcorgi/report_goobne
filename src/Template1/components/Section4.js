@@ -2,187 +2,137 @@ import React, { useEffect, useState } from 'react';
 import newsLogo from '../../img/placeholder.svg';
 import { useRecoilValue } from 'recoil';
 import { themeState } from '../../recoil/atom';
+import PieChart from '../chart/section4/PieChart';
+import HighlightedLineChart from "../chart/section4/HighlightedLineChart";
 
 export default function Section4() {
-    const theme = useRecoilValue(themeState);
-    const [sentimentColors, setSentimentColors] = useState({
-        positive: '#0269c8',
-        negative: '#7f7f7f',
-        neutral: '#24b6fa'
-    });
-
-    // 테마 변경시 색상 업데이트 - atom에서 값 직접 가져오기
-    useEffect(() => {
-        if (theme) {
-            setSentimentColors({
-                positive: theme.positive,
-                negative: theme.negative,
-                neutral: theme.neutral
-            });
-        }
-    }, [theme]);
-
-    const newsCategories = [
-        {
-            id: 1,
-            title: "1. 수입식품업체의 원료 소비기한 조작 사건",
-            items: [
-                {
-                    source: "생활법",
-                    title: "수입식품업체서 '원료 소비기한' 조작 납품...유명 식품업체 식품...",
-                    link: "https://www.foodnews.co.kr/news/articleView.html?idxno=112347",
-                    date: "2025.03.15",
-                    comments: 1,
-                    sentiment: "negative"
-                },
-                {
-                    source: "조세일보",
-                    title: "소비기한 지난 원료 납품...'유명 치킨 브랜드도 당했다'",
-                    link: "https://www.joseilbo.com/news/htmls/2025/03/20250315538846.html",
-                    date: "2025.03.15",
-                    comments: 3,
-                    sentiment: "negative"
-                }
-            ]
-        },
-        {
-            id: 2,
-            title: "2. 매출 감소",
-            items: [
-                {
-                    source: "네이트",
-                    title: "\"비싸도 사 먹는데\"...외식업계 매출은 5개월째 '뒷걸음'",
-                    link: "https://news.nate.com/view/20250315n11824",
-                    date: "2025.03.15",
-                    comments: 4,
-                    sentiment: "neutral"
-                },
-                {
-                    source: "다음뉴스",
-                    title: "식당·주점 등 업종불문 외식업 다 악화...\"올해가 더 걱정\"",
-                    link: "https://v.daum.net/v/20250310060200427",
-                    date: "2025.03.10",
-                    comments: 2,
-                    sentiment: "negative"
-                }
-            ]
-        },
-        {
-            id: 3,
-            title: "3. 배달의민족 포장 주문 수수료 부과 발표",
-            items: [
-                {
-                    source: "국제신문",
-                    title: "\"배민 '포장주문 수수료', 음식가격 인상으로 이어질 것\"",
-                    link: "https://www.kookje.co.kr/news2011/asp/newsbody.asp?",
-                    date: "2025.03.14",
-                    comments: 2,
-                    sentiment: "neutral"
-                },
-                {
-                    source: "시사저널",
-                    title: "소비자단체 \"포장 주문에도 배달 앱 수수료...음식값 상승 우려\"",
-                    link: "https://www.sisajournal.com/news/articleView.html?idxno=327015",
-                    date: "2025.03.14",
-                    comments: 0,
-                    sentiment: "negative"
-                },
-                {
-                    source: "연합뉴스",
-                    title: "소비자단체 \"배달앱, 포장주문에도 수수료...물가상승 촉발 우려\"",
-                    link: "https://www.yna.co.kr/view/AKR20250314058000030?input=1195m",
-                    date: "2025.03.14",
-                    comments: 0,
-                    sentiment: "positive"
-                }
-            ]
-        },
-        {
-            id: 4,
-            title: "4. 글로벌 확장 및 시장 다각화",
-            items: [
-                {
-                    source: "SR타임스",
-                    title: "사업다각화·신메뉴 출시로 외연확장하는 K치킨 3사",
-                    link: "https://www.srtimes.kr/news/articleView.html?idxno=173713",
-                    date: "2025.03.14",
-                    comments: 0,
-                    sentiment: "negative"
-                }
-            ]
-        },
-        {
-            id: 5,
-            title: "5. 치킨 전문점 브랜드평판 순위 발표",
-            items: [
-                {
-                    source: "ZUM",
-                    title: "[브랜드평판] 치킨 전문점 2025년 3월 빅데이터 1위 BBQ, 2위 교촌치킨, 3위 굽네치킨",
-                    link: "https://news.zum.com/articles/96863538?utm_source=chatgpt.com",
-                    date: "2025.03.14",
-                    comments: 0,
-                    sentiment: "neutral"
-                }
-            ]
-        }
-    ];
-
-    const getSentimentText = (sentiment) => {
-        switch(sentiment) {
-            case 'positive':
-                return '긍정';
-            case 'negative':
-                return '부정';
-            case 'neutral':
-                return '중립';
-            default:
-                return '';
-        }
-    };
-
     return (
-        <>
         <div className="page-section">
             <h4 className="h4 page-title">
-                {/* <span className="num">Ⅲ.</span> */}
-                뉴스 분석
+                <span className="num">II.</span>
+                경쟁사 인식 분석
+
+                <h5 class="page-sub-title">1. 경쟁사 언급 개요</h5>
+
+                <p className="page-title-date">
+                    <b>분석일자</b>
+                    <span>2025.06.16 ~ 2025.06.22</span>
+                </p>
             </h4>
-            <h5 className="h5">1. 상세 기사 목록</h5>
-            {/* This section is visible both on screen and in print */}
-            <div className="news-section">
-                {newsCategories.map(category => (
-                    <div className="news-category" key={category.id}>
-                        <div className="category-title">{category.title}</div>
-                        {category.items.map((item, index) => (
-                            <div className="news-item" key={index}>
-                                <div className="news-source">
-                                    <div className="news-logo">
-                                        <img src={newsLogo} alt={item.source} />
-                                    </div>
-                                </div>
-                                <div className="news-content">
-                                    <div className="news-title">{item.title}</div>
-                                    <div className="news-link-wrapper">
-                                        <a className="news-link" href={item.link}>{item.link}</a>
-                                        <span className="news-date">|  {item.date}</span>
-                                    </div>
-                                </div>
-                                <div className="news-meta">
-                                    <span className="view-count">댓글 {item.comments}건</span>
-                                    <div className="sentiment-icons">
-                                        <span className={`sentiment-dot ${item.sentiment}`}></span>
-                                        <span className={`sentiment-text ${item.sentiment}`}>
-                                            {getSentimentText(item.sentiment)}
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        ))}
+
+            <div className="issue-chart-section othermargin">
+                <div className="issue-chart-section-inner first">
+                    <div className="issue-title txt-center">
+                        구분
                     </div>
-                ))}
+                    <div className="issue-box-top">
+                       소셜 미디어 언급량
+                    </div>
+                    <div className="issue-box-btm">
+                       감성 언급량
+                    </div>
+                </div>
+                <div className="issue-chart-section-inner txt-center">
+                    <div className="issue-title">
+                    굽네치킨
+                    </div>
+                    <div className="issue-box-top">
+                        <p>2,372건</p>
+                        <p className="issue-box-top-text">
+                            <span style={{color:'#3686e7'}}>&#9650;</span>
+                            <span>43.03% (전주대비)</span>
+                        </p>
+                    </div>
+                    <div className="issue-box-btm">
+                       <div><span>긍</span> <b>88.96%</b></div>
+                       <div><span>중</span> <b>9.31%</b></div>
+                       <div><span>부</span> <b>1.74%</b></div>
+                    </div>
+                </div>
+                <div className="issue-chart-section-inner txt-center">
+                    <div className="issue-title">
+                    교촌치킨
+                    </div>
+                    <div className="issue-box-top">
+                    <p>2,372건</p>
+                    <p className="issue-box-top-text">
+                        <span style={{color:'#3686e7'}}>&#9650;</span>
+                        <span>43.03% (전주대비)</span>
+                    </p>
+                    </div>
+                    <div className="issue-box-btm">
+                       <div><span>긍</span> <b>83.52%</b></div>
+                       <div><span>중</span> <b>13.94%</b></div>
+                       <div><span>부</span> <b>2.53%</b></div>
+                    </div>
+                </div>
+                <div className="issue-chart-section-inner txt-center">
+                    <div className="issue-title">
+                    bhc
+                    </div>
+                    <div className="issue-box-top">
+                    <p>2,372건</p>
+                    <p className="issue-box-top-text">
+                        <span style={{color:'#e74c3c'}}>&#9660;</span>
+                        <span>43.03% (전주대비)</span>
+                    </p>
+                    </div>
+                    <div className="issue-box-btm">
+                       <div><span>긍</span> <b>79.05%</b></div>
+                       <div><span>중</span> <b>17.50%</b></div>
+                       <div><span>부</span> <b>3.45%</b></div>
+                    </div>
+                </div>
+            </div>
+
+            <div className="issue-chart-section margin0">
+                <div className="issue-chart-section-inner" style={{width:"100%"}}>
+                    <div className="issue-title">
+                    총언급량
+                    </div>
+                    <div>
+                        <HighlightedLineChart />
+                    </div>
+                </div>
+                <div className="issue-chart-section-inner" style={{width:"230px"}}>
+                    <div className="issue-title">
+                    총언급량 구성 비율
+                    </div>
+                    <div >
+                        <PieChart />
+                    </div>
+                </div>
+            </div>
+
+            <div className="news-list">
+                <h5 className="news-title">언급량 데이터 분석 결과</h5>
+                <ul className="news-list-ul">
+                    <li>
+                    최근 치킨 프랜차이즈 시장은 다각적인 변화를 겪고 있으며 특히 외식업계는 배달앱 수수료 인상과 수입식품업체의 원료 소비기한 조작 사건 같은 도전에 직면해 있지만 이러한 변화에 대응하기 위해 차별화된 전략을 구사하고 있습니다.
+                    </li>
+                  <li>
+                    <div className="news-date-group-title">3월 11일</div>
+                    <ul className="news-date-group-list">
+                      <li>굽네치킨 운영사인 GN푸드가 2025년까지 해외 시장에 100개 매장을 오픈한다는 글로벌 확장 계획 발표 및 다양한 이벤트 진행. 그러나 경쟁 브랜드 대비 낮은 언급량 여전</li>
+                      <li>BHC는 푸드아식품의 유통기한 조작 사건에 연루되어 대규모 제품 회수 조치를 시행했으나, 여전히 시장인지도에서 강세 유지. 특히, 커뮤니티를 통한 집중적인 광고의 영향 존재</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <div className="news-date-group-title">3월 11일</div>
+                    <ul className="news-date-group-list">
+                      <li>구미시에서 시작하는 '이야기가 있는 산업문화투어'는 교촌치킨의 브랜드 역사와 치킨 제조 과정을 직접 체험할 수 있는 기회를 제공한다고 보도됨</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <div className="news-date-group-title">3월 11일</div>
+                    <ul className="news-date-group-list">
+                      <li>굽네치킨의 소셜 미디어(인스타, 블로그, 티스토리) 언급량 상승은 사람들이 고추바사삭 메뉴의 맛과 타 브랜드에 비해 낮은 칼로리를 칭찬하며, 다양한 할인 및 행사 정보 공유</li>
+                      <li>Bhc 소비기한 경과 원료 납품 이슈</li>
+                      <li>교촌치킨은 브랜드 평판 1위를 차지한 스타 모델(변우석)을 활용한 마케팅 효과 덕에 언급량 상승</li>
+                    </ul>
+                  </li>
+                </ul>
             </div>
         </div>
-        {/* 뉴스 분석 끝 */}
-        </>
     );
 }  
