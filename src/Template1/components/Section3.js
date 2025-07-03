@@ -6,7 +6,7 @@ export default function Section3() {
         <div className="page-section">
             <h4 className="h4 page-title">
                 <span className="num">I.</span>
-                 주요 이슈
+                주간 주요 이슈
 
                 <p className="page-title-date">
                     <b>분석일자</b>
@@ -33,123 +33,40 @@ export default function Section3() {
                 </li>
             </ul>
 
-            <h4 className="h4 page-title mt-40">
-                {/* <span className="num">Ⅱ.</span> */}
-                주간 하이라이트</h4>
+            <div className="news-list">
+                <h5 className="news-title">연관 뉴스</h5>
+                <ul className="news-list-ul">
+                    <li>
+                        <a href="#" className="news-item-title">배달앱 '배달의민족' 운영사, 1만원 이하 소액주문 중개수수료 면제 추진</a>
+                        <span>한겨레 ｜ 2025-06-19</span>
+                    </li>
+                    <li>
+                        <a href="#" className="news-item-title">‘플랫폼 수수료 상한제’는 상생 위한 브레이크</a>
+                        <span>중기이코노미 ｜ 2025-06-19</span>
+                    </li>
+                    <li>
+                        <a href="#" className="news-item-title">BBQ, 물가 안정 동참 선언···“배달 수수료 부담 완화 시급”  </a>
+                        <span>여성경제신문 ｜ 2025-06-19</span>
+                    </li>
+                    <li>
+                        <a href="#" className="news-item-title">‘태풍의 눈’ 프랜차이즈 유통마진, 1조원대 소송으로 번지나</a>
+                        <span>파이낸셜뉴스 ｜ 2025-06-17</span>
+                    </li>
+                    <li>
+                        <a href="#" className="news-item-title">소송·수익악화·플랫폼 부담까지…사면초가 빠진 프랜차이즈</a>
+                        <span>더벨 ｜ 2025-06-19</span>
+                    </li>
+                    <li>
+                        <a href="#" className="news-item-title">브랜드 다각화 나선 BBQ, '베테랑' 백승혁 CSO 영입</a>
+                        <span>파이낸셜뉴스 ｜ 2025-06-17</span>
+                    </li>
+                    <li>
+                        <a href="#" className="news-item-title">윤홍근 KIVA 서울외교자원봉사회 총회장 취임, 113개 대사관과 협력</a>
+                        <span>전북도민일보 ｜ 2025-06-22</span>
+                    </li>
 
-            <div className="table-layout bg-red">
-                <div className="table-head">
-                    <div className="table-tr">
-                        <div className="table-th col-subj">내용</div>
-                        <div className="table-th txt-center">기사 건수</div>
-                    </div>
-                </div>
-                <div className="table-body">
-                    <div className="table-tr">
-                        <div className="table-th col-subj">1. 수입식품업체의 원료 소비기한 조작 사건: (주)푸드야식품이 소비기한을 연장
-                            표시한 수입 과·채가공품을 납품해 동원홈푸드와 BHC 등 여러 식품회사의 제품이 회수 조치 진행
-                        </div>
-                        <div className="table-td">2건</div>
-                    </div>
-                    <div className="table-tr">
-                        <div className="table-th col-subj">
-                            2. 2025년 1분기 외식업계 체감 경기 지수는 71.52로, 전 분기 대비 4.52포인트 하락. 경기침체와 물가, 인건비, 식자재비 상승
-                            등으로 매출이 줄어 업계는 정부 지원이 필요
-                        </div>
-                        <div className="table-td">2건</div>
-                    </div>
-
-                    <div className="table-tr">
-                        <div className="table-th col-subj">
-                            3. 배달 증가와 비용 부담 : 배달 수수료와 닭고기 가격 상승으로 인해 가맹점주들의 수익성이 악화됨. 굽네치킨은 계육 공급가를 인상하고 모바일
-                            상품권 수수료를 가맹점주에게 전가하여 갈등이 발생
-                        </div>
-                        <div className="table-td">3건</div>
-                    </div>
-
-                    <div className="table-tr">
-                        <div className="table-th col-subj">
-                            4. 글로벌 확장 및 시장 다각화 : BBQ는 북미 시장에서 약 250개 매장을 운영하며, 글로벌 매출 성장률이 전년 대비 90% 증가. 해외
-                            소비자 판매 매출은 약 3000억 원을 기록
-                        </div>
-                        <div className="table-td">1건</div>
-                    </div>
-
-                    <div className="table-tr">
-                        <div className="table-th col-subj">
-                            5. 브랜드 평판 순위 변화 : 2025년 3월 기준 브랜드 평판 순위는 BBQ(1위), 교촌치킨(2위), 굽네치킨(3위)로 나타남. BBQ는
-                            긍정 비율 **89.16%**를 기록하며 소비자 평판에서 강세를 보임
-                        </div>
-                        <div className="table-td">1건</div>
-                    </div>
-                </div>
-            </div>
-
-            <div className="h20"></div>
-
-            <h5 className="h5">2. 주요 지표</h5>
-
-            <div className="table-layout border-red table-variance txt-center">
-                <div className="table-head">
-                    <div className="table-tr">
-                        <div className="table-th txt-center">구분</div>
-                        <div className="table-th txt-center bg-company1">굽네 치킨</div>
-                        <div className="table-th txt-center bg-company2">교촌 치킨</div>
-                        <div className="table-th txt-center bg-company3">BHC</div>
-                    </div>
-                </div>
-                <div className="table-body">
-                    <div className="table-tr">
-                        <div className="table-td col-nowrap">
-                            소셜 미디어 언급량
-                        </div>
-                        <div className="table-td">
-                            2,372건
-                            <p className="color-down">▲ 43.03% (전주대비)</p>
-                        </div>
-                        <div className="table-td">
-                            6,075건
-                            <p className="color-down">▲ 43.03% (전주대비)</p>
-                        </div>
-                        <div className="table-td">
-                            6,705건
-                            <p className="color-up">▼ 43.03% (전주대비)</p>
-                        </div>
-                    </div>
-                    <div className="table-tr">
-                        <div className="table-td col-nowrap">
-                            감성 언급량
-                        </div>
-                        <div className="table-td">
-                            긍 88.96%<br/>
-                            중 9.31%<br/>
-                            부 1.74%
-                        </div>
-                        <div className="table-td">
-                            긍 83.52%<br/>
-                            중 13.94%<br/>
-                            부 2.53%
-                        </div>
-                        <div className="table-td">
-                            긍 79.05%<br/>
-                            중 17.50%<br/>
-                            부 3.45%
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div className="table-layout-chart txt-center">
-                <div className="table-body">
-                    <div className="table-tr">
-                        <div className="table-td">
-                            소셜 미디어 언급량 구성비율 (SOV)
-                        </div>
-                        <div className="table-td">
-                            <BarChart/>
-                        </div>
-                    </div>
-                </div>
+                </ul>
+              
             </div>
         </div>
     );

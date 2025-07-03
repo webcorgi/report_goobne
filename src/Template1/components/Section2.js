@@ -17,7 +17,7 @@ export default function Section2() {
                     </li>
                     <li>
                         <p className="index-depth1">분석 기간</p>
-                        <p>2025.06.16 ~ 2025.06.22</p>
+                        <p className="index-date">2025.06.16 ~ 2025.06.22</p>
                     </li>
                     <li>
                         <p className="index-depth1">

@@ -222,7 +222,7 @@ input:-webkit-autofill:active {
 
 :root {
   --white: #fff;
-  --black: #22252a;
+  --black: #495056;
   --background: #f4f4f6;
   --primary: #3366FF;
   --primary-darker: rgb(41, 80, 196);
@@ -239,7 +239,7 @@ input:-webkit-autofill:active {
 
 html,
 body {
-  color: var(--black);
+  color: var(--subtext);
 }
 body {
 }
@@ -268,12 +268,6 @@ hr.breakAfter {
     page-break-after: avoid;
   }
   
-  /* Fix for tables in print */
-  .table-layout,
-  .table-layout-chart {
-    page-break-inside: avoid;
-    break-inside: avoid;
-  }
 }
 
 /*
@@ -391,10 +385,6 @@ hr.breakAfter {
 }
 .col-nowrap {
   white-space: nowrap;
-}
-/* table layout */
-.table-layout {
-  margin:20px 0 0 0;
 }
 .table-caption {
   font-size: 14px;
@@ -999,7 +989,7 @@ hr.breakAfter {
 }
 .issue-list {
   list-style-type:none;
-  padding:10px 0;
+  padding:10px 0 20px;
 }
 .issue-list li {
   padding:10px 0;
@@ -1010,7 +1000,26 @@ hr.breakAfter {
 }
 .issue-list li span {
   display:inline-block;
-  width:40px;
+  width:20px;
+  flex-shrink:0;
+  font-weight:600;
+}
+
+.issue-list2 {
+  list-style-type:none;
+  padding:10px 0 20px;
+}
+.issue-list2>li {
+  padding:10px 0;
+  border-bottom:1px solid #DEE1E6;
+  padding-left:15px;
+  font-size:14px;
+}
+.issue-list2>ul {}
+.issue-list2 li span {
+  display:inline-block;
+  width:20px;
+  flex-shrink:0;
   font-weight:600;
 }
 .page-title.blue {
@@ -1300,6 +1309,7 @@ hr.breakAfter {
   letter-spacing: -0.64px;
 }
 .index-list h4 {
+  color:var(--black);
   font-size:24px;
   font-weight:bold;
   margin-bottom:40px;
@@ -1323,10 +1333,13 @@ hr.breakAfter {
   border-top:1px solid #DEE1E6;
   padding:15px 0;
 }
+.index-list > ul > li p {
+}
 .index-list > ul > li:last-child {
   border-bottom:1px solid #DEE1E6;
 }
 .index-list > ul > li .index-depth1 {
+  color:var(--black);
   width: 200px;
   margin-right: 30px;
   font-size: 16px;
@@ -1416,9 +1429,6 @@ hr.breakAfter {
 }
 .overview-dd .list {
   margin-top: 0;
-}
-.overview-dd .table-layout {
-  margin-top: 12px;
 }
 .overview-dd .sometrend {
   color: var(--purple);
@@ -1729,9 +1739,6 @@ article > .editButton:hover {
   font-size:12px;
 }
 
-.table-layout-chart .table-td:nth-child(1) {
-  max-width:152px;
-}
 
 .color-company1 {
   color:var(--primary) !important;
@@ -3188,6 +3195,90 @@ article > .editButton:hover {
   margin-bottom: 0;
 }
 
+
+.news-list{
+  background:#F8F9FB;
+  padding:15px 0;
+}
+.news-title{
+  color:var(--primary);
+  position:relative;
+  padding-left:15px;
+  margin-bottom:13px;
+  font-weight:600;
+}
+.news-title::before{
+  content:'';
+  position:absolute;
+  left:0;
+  top:50%;
+  transform:translateY(-50%);
+  width:3px;
+  height:18px;
+  background:var(--primary);
+}
+.news-list-ul {
+  padding-left:40px;
+}
+.news-list-ul li {
+  margin-bottom:3px;
+}
+.news-list-ul li a {
+  display:block;
+}
+.news-list-ul li span {
+  color:#ADB6BD;
+}
+.news-list-ul li::marker {
+  color:#ADB6BD;
+}
+
+.issue-chart-section {
+  border-top:1px solid var(--primary);
+  display:flex;
+  justify-content:flex-start;
+  gap:10px;
+  margin-top:30px;
+}
+.issue-title {
+  color:var(--primary);
+  font-weight:600;
+  border-bottom:1px solid var(--primary);
+  padding:7px 10px;
+  width:100%;
+}
+.issue-title.keyword {
+}
+.issue-chart-section-inner.keyword {
+  flex-shrink:0;
+  width:140px;
+}
+.issue-chart-section-inner.keyword .issue-title {
+  text-align:center;
+}
+.issue-chart-section-inner {
+  width:100%;
+}
+
+.issue-keyword-content {
+  padding-left:30px;
+  margin-top:5px;
+}
+.issue-keyword-content li {
+  font-size:12px;
+  padding:5px 0;
+}
+.issue-keyword-content li::marker {
+  color:var(--subtext);
+}
+
+.issue-chart-area {
+  height: 300px;
+  width: 100%;
+  padding: 10px;
+}
+
+
 /* Consolidated Print Media Queries */
 @media print {
   /* Page breaks and layout */
@@ -3262,12 +3353,6 @@ article > .editButton:hover {
     transform: none !important;
   }
 
-  /* Table adjustments */
-  .table-layout,
-  .table-layout-chart {
-    page-break-inside: avoid;
-    break-inside: avoid;
-  }
 
   /* News section adjustments */
   .news-section {

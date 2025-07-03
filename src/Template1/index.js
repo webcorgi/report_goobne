@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import Section1 from "./components/Section1";
 import Section2 from "./components/Section2";
 import Section3 from "./components/Section3";
+import Section3_2 from "./components/Section3_2";
 import Section4 from "./components/Section4";
 import Section5 from "./components/Section5";
 import Section6 from "./components/Section6";
@@ -36,6 +37,7 @@ const Template1 = () => {
                     skyBlue1:'#24b6fa',
                     skyBlue2:'#56ade8',
                     black: '#22252a',
+                    subtext: '#495056',
                     blackAccent: '#7f7f7f',
                     bgPrimary: 'rgb(61 128 232 / 10%)',
                     background: '#f4f4f6',
@@ -79,7 +81,8 @@ const Template1 = () => {
                     <Section1/>
                     <Section2/>
                     <Section3/>
-                    <Section4/>
+                    <Section3_2/>
+                    {/* <Section4/> */}
                     <Section5/>
                     <Section6/>
                     <Section7/>
