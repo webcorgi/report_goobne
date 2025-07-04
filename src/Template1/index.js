@@ -6,16 +6,15 @@ import Section3 from "./components/Section3";
 import Section3_2 from "./components/Section3_2";
 import Section4 from "./components/Section4";
 import Section5 from "./components/Section5";
-import Section6 from "./components/Section6";
-import Section7 from "./components/Section7";
-import Section8 from "./components/Section8";
-import Section9 from "./components/Section9";
 import Section10 from "./components/Section10";
 import { useRecoilState } from 'recoil';
 import { themeState } from '../recoil/atom';
 import Section3_3 from './components/Section3_3';
 import Section3_4 from './components/Section3_4';
-
+import Section4_2 from './components/Section4_2';
+import Section4_3 from './components/Section4_3';
+import Section4_4 from './components/Section4_4';
+import Section4_5 from './components/Section4_5';
 
 const Template1 = () => {
     /****************************************
@@ -87,12 +86,12 @@ const Template1 = () => {
                     <Section3_3/>
                     <Section3_4/>
                     <Section4/>
-                    <Section5/>
-                    <Section6/>
-                    <Section7/>
-                    <Section8/>
-                    <Section9/>
-                    <Section10/>
+                    <Section4_2/>
+                    <Section4_3/>
+                    <Section4_4/>
+                    <Section4_5/>
+        
+                    {/* <Section10/> */}
                 </div>
             </div>
         </div>

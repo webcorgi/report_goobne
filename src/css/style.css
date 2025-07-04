@@ -270,6 +270,12 @@ hr.breakAfter {
   
 }
 
+.h10 {
+  height:10px;
+}
+.h15 {
+  height:15px;
+}
 /*
   Components
 */
@@ -1057,8 +1063,10 @@ hr.breakAfter {
 .issue-chart-section.othermargin {
     margin-top:15px;
 }
-.issue-chart-section.margin0 {
+.issue-chart-section.othermargin2 {
   margin-top:0px;
+  margin-bottom:0;
+  border-bottom:1px solid #DEE1E6;
 }
 .issue-chart-section-inner.first .issue-box-top,
 .issue-chart-section-inner.first .issue-box-btm {
@@ -3313,8 +3321,6 @@ article > .editButton:hover {
   padding:7px 10px;
   width:100%;
 }
-.issue-title.keyword {
-}
 .issue-chart-section-inner.keyword {
   flex-shrink:0;
   width:140px;
@@ -3324,6 +3330,15 @@ article > .editButton:hover {
 }
 .issue-chart-section-inner {
   width:100%;
+}
+.issue-chart-section-inner.tive {
+  min-width:110px;
+  width:110px;
+}
+.issue-chart-section-inner .insite-chart-wrap {
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 8px;
 }
 
 .issue-keyword-content {
@@ -3343,7 +3358,86 @@ article > .editButton:hover {
   width: 100%;
   padding: 10px;
 }
+.insite-chart-wrap{
+  display:flex;
+  justify-content:space-between;
+  align-items:stretch;
+}
 
+
+.table-insite table {
+}
+.table-insite table {
+  width:100%;
+  font-size:11px;
+  border-bottom:1px solid #DEE1E6;
+}
+.table-insite table th {
+  font-weight:600;
+  padding:3px;
+  border-bottom:1px solid #DEE1E6;
+}
+.table-insite table td {
+  border-bottom:0;
+  padding:3px;
+  text-align:center;
+}
+.table-insite table td:nth-child(3){
+  text-align:left;
+}
+
+.table-insite table td p {
+  position:relative;
+  padding-left:10px;
+}
+.table-insite table td p:before {
+  content:'';
+  color:#858E95;
+  margin-right:5px;
+  display:inline-block;
+  width:3px;
+  height:3px;
+  background:#858E95;
+  border-radius:50%;
+  position:absolute;
+  top:6px;
+  left:1px;
+}
+.txt-left{
+  text-align:left;
+}
+
+
+.keyword-five {
+  margin-top:10px;
+  gap:5px;
+  padding:5px 0;
+  text-align:center;
+}
+.keyword-five button {
+  margin:8px auto;
+  width:50px;
+  height:18px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  border-radius:4px;
+  font-size:10px;
+  color:#4AB88D;
+  border:1px solid #4AB88D;
+  font-weight:600;
+}
+.keyword-five button.positive {
+
+}
+.keyword-five button.neutral {
+  color:#FFB448;
+  border:1px solid #FFB448;
+}
+.keyword-five button.negative {
+  color:#E84E3D;
+  border:1px solid #E84E3D;
+}
 
 /* Consolidated Print Media Queries */
 @media print {

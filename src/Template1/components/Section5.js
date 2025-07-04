@@ -1,5 +1,3 @@
-import HighlightedLineChart from "../chart/section5/HighlightedLineChart";
-import PieChart from "../chart/section5/PieChart";
 
 export default function Section5() {
     return (
@@ -21,7 +19,6 @@ export default function Section5() {
                         <li>
                             최근 치킨 프랜차이즈 시장은 다각적인 변화를 겪고 있으며 특히 외식업계는 배달앱 수수료 인상과 수입식품업체의 원료 소비기한 조작 사건 같은 도전에 직면해 있지만 이러한 변화에 대응하기 위해 차별화된 전략을 구사하고 있습니다.
                         </li>
-                        
                         <li>
                             3월 11일
                             <ul className="gray-list">
@@ -33,7 +30,6 @@ export default function Section5() {
                                 </li>
                             </ul>
                         </li>
-                        
                         <li>
                             3월 12일
                             <ul className="gray-list">
@@ -42,7 +38,6 @@ export default function Section5() {
                                 </li>
                             </ul>
                         </li>
-                        
                         <li>
                             3월 14일
                             <ul className="gray-list">
