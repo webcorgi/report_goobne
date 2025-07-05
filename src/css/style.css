@@ -3439,6 +3439,63 @@ article > .editButton:hover {
   border:1px solid #E84E3D;
 }
 
+.issue-chart-section-inner.interest .issue-title {
+  min-width:80px;
+  width:80px;
+  display:flex;
+  align-items:center;
+}
+.issue-chart-section-inner.interest {
+  display:flex;
+  justify-content:space-between;
+  align-items:stretch;
+  gap:10px;
+}
+.text-interest {
+  font-size:12px;
+  line-height:1.6;
+  padding:8px;
+}
+  .issue-chart-section.interest {
+    border-top:0;
+}
+
+.inetrest-table-date {
+  color:#E84E3D;
+  font-size:8px;
+}
+.inetrest-table th {
+  font-size:8px;
+  background:#F2F3F5;
+  padding:3.5px;
+}
+.inetrest-table td {
+  font-size:8px;
+  text-align:center;
+}
+.inetrest-table td:nth-child(2) {
+  text-align:left;
+}
+
+
+
+.inetrest-table td .dot {
+  display:inline-block;
+  width:4px;
+  height:4px;
+  border-radius:50%;
+  background:#4AB88D;
+  margin-right:5px;
+  position:relative;
+  top:-1px;
+}
+.inetrest-table td .green {}
+.inetrest-table td .primary {}
+.inetrest-table td .teal {}
+
+
+
+
 /* Consolidated Print Media Queries */
 @media print {
   /* Page breaks and layout */

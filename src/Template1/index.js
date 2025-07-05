@@ -15,6 +15,7 @@ import Section4_2 from './components/Section4_2';
 import Section4_3 from './components/Section4_3';
 import Section4_4 from './components/Section4_4';
 import Section4_5 from './components/Section4_5';
+import Section4_6 from './components/Section4_6';
 
 const Template1 = () => {
     /****************************************
@@ -90,6 +91,7 @@ const Template1 = () => {
                     <Section4_3/>
                     <Section4_4/>
                     <Section4_5/>
+                    <Section4_6/>
         
                     {/* <Section10/> */}
                 </div>
