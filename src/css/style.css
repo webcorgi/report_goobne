@@ -3464,7 +3464,6 @@ article > .editButton:hover {
   color: #495056;
   margin-bottom: 3px;
   margin-top: 5px;
-  font-size: 14px;
 }
 .news-list-ul .news-date-group-list {
   padding-left: 18px;
@@ -3711,4 +3710,11 @@ article > .editButton:hover {
   font-weight:600;
   border-bottom:1px solid var(--primary);
   margin-bottom:10px;
+}
+.view_mobile {
+  display:none !important;
+  font-size:11px !important;
+  color:#858E95;
+  font-weight:600;
+  margin-bottom:5px;
 }

@@ -370,29 +370,6 @@
   }
 }
 
-@media screen and (max-width: 720px) {
-  .page-section.cover.section1-print {
-    height:500px;
-    padding:50px 20px;
-  }
-  .cover-desc p{
-    font-size:12px;
-    padding:0 20px;
-  }
-  .cover-title p:first-child{
-    font-size:30px;
-  }
-  .cover-title p:last-child{
-    font-size:16px;
-  }
-  .logo-image{
-    max-width:100px;
-  }
-}
-
-
-
-
 
 /*  */
 /* Enterprise-Grade Cover Design */
@@ -681,17 +658,12 @@
 }
 
 @media screen and (max-width: 768px) {
-  .footer-note,
-  .enterprise-footer{
-    margin-top:40px;
-  }
   .page-section.cover.section1-print {
-    height:700px;
     padding: 40px 30px;
   }
   
   .corporate-header {
-    margin-bottom: 80px;
+    margin-bottom: 20px;
   }
   
   .content-area {
@@ -699,20 +671,60 @@
   }
   
   .corporate-title {
-    font-size: 30px;
+    font-size: 24px;
+    margin-bottom:0;
+    font-weight:600;
   }
   
   .subject-text {
-    font-size: 18px;
+    font-size: 24px;
   }
   
   .footer-content {
     flex-direction: column;
     gap: 20px;
     align-items: flex-start;
+    padding-top:0;
+    border-top:0;
   }
   
   .footer-info {
     text-align: left;
+  }
+  .report-subject {
+    margin-bottom:50px;
+  }
+  .report-details .details-label,
+  .report-details .details-text{
+    font-size:14px;
+    line-height:1.2;
+  }
+  .report-details .details-label {
+    width:75px;
+  }
+  .report-details{
+    padding:10px 0;
+    margin-bottom:0;
+  }
+  .subject-text2 {
+    font-size: 16px;
+  }
+  
+  .page-section.cover.section1-print {
+    height:auto ;
+    padding:50px 20px;
+  }
+  .cover-desc p{
+    font-size:12px;
+    padding:0 20px;
+  }
+  .cover-title p:first-child{
+    font-size:30px;
+  }
+  .cover-title p:last-child{
+    font-size:16px;
+  }
+  .logo-image{
+    max-width:100px;
   }
 }

@@ -66,10 +66,10 @@ const PieChartBhc = () => {
   ];
 
   return (
-    <div style={{ minWidth: '220px', textAlign: 'center', padding: '10px 0'}}>
+    <div style={{ minWidth: '150px', textAlign: 'center', padding: '10px 0'}}>
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 20 }}>
         {/* 차트 영역 */}
-        <div style={{ position: 'relative', height: '108px', width: '120px', flexShrink: 0 }}>
+        <div style={{ position: 'relative', height: '108px', width: '100px', flexShrink: 0 }}>
           <Pie data={data} options={options} plugins={[ChartDataLabels]} />
           {/* 중앙 텍스트 */}
           <div style={{
@@ -88,7 +88,7 @@ const PieChartBhc = () => {
         </div>
 
         {/* 범례 영역 */}
-        <div style={{ display: 'flex', flexDirection: 'column', gap: 4, alignItems: 'flex-start', width:'210px', padding:0 }}>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 4, alignItems: 'flex-start', width:'150px', padding:0 }}>
           {legendItems.map((item, idx) => (
             <div key={item.label} style={{ display: 'flex', alignItems: 'center', fontSize: 8, color: '#495056', fontWeight: 400 }}>
               <span style={{ display: 'inline-block', width: 8, height: 8, background: item.color, marginRight: 6 }}></span>

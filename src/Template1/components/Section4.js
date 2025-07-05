@@ -37,6 +37,7 @@ export default function Section4() {
                     굽네치킨
                     </div>
                     <div className="issue-box-top">
+                        <span className="view_mobile">소셜 미디어 언급량</span>
                         <p>2,372건</p>
                         <p className="issue-box-top-text">
                             <span style={{color:'#3686e7'}}>&#9650;</span>
@@ -44,6 +45,7 @@ export default function Section4() {
                         </p>
                     </div>
                     <div className="issue-box-btm">
+                       <span className="view_mobile">감성 언급량</span>
                        <div><span>긍</span> <b>88.96%</b></div>
                        <div><span>중</span> <b>9.31%</b></div>
                        <div><span>부</span> <b>1.74%</b></div>
@@ -54,13 +56,15 @@ export default function Section4() {
                     교촌치킨
                     </div>
                     <div className="issue-box-top">
-                    <p>2,372건</p>
-                    <p className="issue-box-top-text">
-                        <span style={{color:'#3686e7'}}>&#9650;</span>
-                        <span>43.03% (전주대비)</span>
-                    </p>
+                        <span className="view_mobile">소셜 미디어 언급량</span>
+                        <p>2,372건</p>
+                        <p className="issue-box-top-text">
+                            <span style={{color:'#3686e7'}}>&#9650;</span>
+                            <span>43.03% (전주대비)</span>
+                        </p>
                     </div>
                     <div className="issue-box-btm">
+                    <span className="view_mobile">감성 언급량</span>
                        <div><span>긍</span> <b>83.52%</b></div>
                        <div><span>중</span> <b>13.94%</b></div>
                        <div><span>부</span> <b>2.53%</b></div>
@@ -68,16 +72,18 @@ export default function Section4() {
                 </div>
                 <div className="issue-chart-section-inner txt-center">
                     <div className="issue-title">
-                    bhc
+                        bhc
                     </div>
                     <div className="issue-box-top">
-                    <p>2,372건</p>
-                    <p className="issue-box-top-text">
-                        <span style={{color:'#e74c3c'}}>&#9660;</span>
-                        <span>43.03% (전주대비)</span>
-                    </p>
+                        <span className="view_mobile">소셜 미디어 언급량</span>
+                        <p>2,372건</p>
+                        <p className="issue-box-top-text">
+                            <span style={{color:'#e74c3c'}}>&#9660;</span>
+                            <span>43.03% (전주대비)</span>
+                        </p>
                     </div>
                     <div className="issue-box-btm">
+                    <span className="view_mobile">감성 언급량</span>
                         <div><span>긍</span> <b>79.05%</b></div>
                         <div><span>중</span> <b>17.50%</b></div>
                         <div><span>부</span> <b>3.45%</b></div>
