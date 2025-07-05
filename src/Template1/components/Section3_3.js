@@ -15,6 +15,8 @@ export default function Section3_3() {
                 </p>
             </h4>
 
+            <div className="h20"></div>
+
             <ul className="issue-list2">
                 <li>
                     <b>4. 외부 플랫폼 및 제휴 마케팅</b>

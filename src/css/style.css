@@ -276,6 +276,16 @@ hr.breakAfter {
 .h15 {
   height:15px;
 }
+.h30 {
+  height:30px;
+}
+h6.page-sub-title {
+  margin-top:20px;
+}
+.sub-title-black{
+  font-size:18px;
+  font-weight:600;
+}
 /*
   Components
 */
@@ -991,7 +1001,7 @@ hr.breakAfter {
   font-weight:600;
   padding:8px 15px;
   background:#E84E3D1A;
-  margin-top:30px;
+  margin-top:20px;
 }
 .issue-list {
   list-style-type:none;
@@ -1013,10 +1023,10 @@ hr.breakAfter {
 
 .issue-list2 {
   list-style-type:none;
-  padding:10px 0 20px;
+  padding:15px 0 0;
 }
 .issue-list2>li {
-  padding:10px 0;
+  padding:5px 0;
   border-bottom:1px solid #DEE1E6;
   padding-left:15px;
   font-size:14px;
@@ -1066,7 +1076,6 @@ hr.breakAfter {
 .issue-chart-section.othermargin2 {
   margin-top:0px;
   margin-bottom:0;
-  border-bottom:1px solid #DEE1E6;
 }
 .issue-chart-section-inner.first .issue-box-top,
 .issue-chart-section-inner.first .issue-box-btm {
@@ -1458,6 +1467,7 @@ hr.breakAfter {
 }
 .index-keywords-table {
   width:100%;
+  border-collapse: collapse;
 }
 .index-keywords,
 .index-keywords-table table {
@@ -1835,254 +1845,13 @@ article > .editButton:hover {
   color:#fff !important;
 }
 
-.premium-competition-table {
-  margin: 25px 0;
-  border-radius: 12px;
-  overflow: hidden;
-  background-color: #ffffff;
-  border: 1px solid rgba(0, 0, 0, 0.05);
-  font-family: "Pretendard", sans-serif;
-}
 
-/* Header styling */
-.competition-header-section {
-  background: linear-gradient(135deg, var(--primary) 0%, var(--primaryDarker) 100%);
-  position: relative;
-  padding: 3px;
-}
-
-.competition-header-section::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: linear-gradient(90deg, var(--skyBlue1), var(--skyBlue2), var(--primaryAccent));
-}
-
-.competition-title-row {
-  display: flex;
-  padding: 18px 0;
-}
-
-.competition-subtitle-row {
-  display: flex;
-  background-color: rgba(255, 255, 255, 0.06);
-  backdrop-filter: blur(5px);
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.competition-column {
-  padding: 12px 16px;
-}
-
-.rank-column {
-  width: 80px;
-  flex-shrink: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.primary-column, .secondary-column {
-  flex: 1;
-  min-width: 0;
-}
-
-.column-header {
-  color: white;
-  font-weight: 600;
-  font-size: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-.primary-column .column-header, 
-.secondary-column .column-header {
-  justify-content: flex-start;
-}
-
-.header-icon {
-  margin-right: 8px;
-  font-size: 18px;
-}
-
-.column-subheader {
-  color: rgba(255, 255, 255, 0.9);
-  font-size: 14px;
-  font-weight: 500;
-  text-align: center;
-  padding: 8px 0;
-}
-
-.revenue-header {
-  color: var(--skyBlue1);
-}
-
-.search-header {
-  color: var(--primaryAccent);
-}
-
-/* Body styling */
-.competition-body {
-  position: relative;
-}
-
-.competition-row {
-  display: flex;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.04);
-  transition: all 0.2s ease;
-}
-
-.competition-row:hover {
-  background-color: rgba(245, 247, 250, 0.5);
-  transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
-}
-
-.competition-row:last-child {
-  border-bottom: none;
-}
-
-/* Tier styling */
-.top-tier {
-  background-color: rgba(2, 105, 200, 0.03);
-}
-
-.mid-tier {
-  background-color: rgba(0, 56, 128, 0.03);
-}
-
-.bottom-tier {
-  background-color: rgba(86, 173, 232, 0.02);
-}
-
-/* Rank badges */
-.rank-badge {
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: 700;
-  color: white;
-  font-size: 16px;
-  position: relative;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.gold {
-  background: linear-gradient(135deg, var(--skyBlue1) 0%, var(--primary) 100%);
-  box-shadow: 0 4px 10px rgba(36, 182, 250, 0.3);
-}
-
-.silver {
-  background: linear-gradient(135deg, var(--primaryAccent) 0%, var(--primaryDarker) 100%);
-  box-shadow: 0 4px 10px rgba(86, 173, 232, 0.3);
-}
-
-.bronze {
-  background: linear-gradient(135deg, var(--primary) 0%, var(--primaryDarker) 100%);
-  box-shadow: 0 4px 10px rgba(2, 105, 200, 0.3);
-}
-
-.competition-row:hover .rank-badge {
-  transform: scale(1.05);
-}
-
-/* Company name styling */
-.company-name {
-  display: flex;
-  align-items: center;
-  font-size: 15px;
-  font-weight: 500;
-  padding: 6px 0;
-}
-
-.company-name.primary {
-  color: var(--primary);
-}
-
-.company-name.secondary {
-  color: var(--primaryDarker);
-}
-
-.company-bullet {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  margin-right: 12px;
-  position: relative;
-}
-
-.company-bullet::after {
-  content: '';
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  right: -2px;
-  bottom: -2px;
-  border-radius: 50%;
-  opacity: 0.3;
-  z-index: -1;
-}
-
-.company-bullet.primary {
-  background-color: var(--primary);
-}
-
-.company-bullet.primary::after {
-  background-color: var(--primary);
-}
-
-.company-bullet.secondary {
-  background-color: var(--primaryDarker);
-}
-
-.company-bullet.secondary::after {
-  background-color: var(--primaryDarker);
-}
-
-/* Media Queries */
-@media print {
-  .premium-competition-table {
-      box-shadow: none;
-      border: 1px solid #eaeaea;
-  }
-  
-  .competition-header-section::after {
-      display: none;
-  }
-  
-  .rank-badge {
-      box-shadow: none !important;
-  }
-  
-  .competition-row:hover {
-      transform: none;
-      box-shadow: none;
-  }
-}
 /* News section styling - Premium version */
 .news-section {
 }
 
 .news-category {
   margin-bottom: 10px;
-}
-
-.category-title {
-  background: var(--newsTitleBg);
-  padding: 2px 10px;
-  font-weight: 600;
-  margin-bottom: 0;
-  font-size: 14px;
-  border-left: 4px solid var(--primary);
-  letter-spacing: -0.5px;
 }
 
 .news-item {
@@ -2462,15 +2231,6 @@ article > .editButton:hover {
     padding-right: 10px !important;
   }
   
-  .news-item {
-    display: flex !important;
-    flex-wrap: nowrap !important;
-    flex-direction: row !important;
-    align-items: center !important;
-    page-break-inside: avoid !important;
-    break-inside: avoid !important;
-  }
-
   .news-source {
     width: 60px !important;
     margin-right: 10px !important;
@@ -3271,6 +3031,7 @@ article > .editButton:hover {
 .news-list{
   background:#F8F9FB;
   padding:15px 0;
+  margin-top:15px;
 }
 .news-title{
   color:var(--primary);
@@ -3324,6 +3085,7 @@ article > .editButton:hover {
 .issue-chart-section-inner.keyword {
   flex-shrink:0;
   width:140px;
+  border-bottom:1px solid #DEE1E6;
 }
 .issue-chart-section-inner.keyword .issue-title {
   text-align:center;
@@ -3357,6 +3119,7 @@ article > .editButton:hover {
   height: 300px;
   width: 100%;
   padding: 10px;
+  border-bottom:1px solid #DEE1E6;
 }
 .insite-chart-wrap{
   display:flex;
@@ -3364,6 +3127,9 @@ article > .editButton:hover {
   align-items:stretch;
 }
 
+.table-insite{
+  border-top:1px solid #DEE1E6;
+}
 
 .table-insite table {
 }
@@ -3447,7 +3213,7 @@ article > .editButton:hover {
 }
 .issue-chart-section-inner.interest {
   display:flex;
-  justify-content:space-between;
+  justify-content:flex-start;
   align-items:stretch;
   gap:10px;
 }
@@ -3455,23 +3221,44 @@ article > .editButton:hover {
   font-size:12px;
   line-height:1.6;
   padding:8px;
+  border-bottom:1px solid #DEE1E6;
 }
   .issue-chart-section.interest {
     border-top:0;
 }
-
+.interest-last-table {
+  border-bottom: 1px solid var(--primary);
+}
+.border-none{
+  border:0;
+}
+.inetrest-table-wrap{
+  padding:10px;
+  display:flex;
+  gap:3px;
+  width:100%;
+}
 .inetrest-table-date {
   color:#E84E3D;
   font-size:8px;
+}
+.inetrest-table{
+  width:100%;
+}
+.inetrest-table table {
+  width:100%;
+  border-collapse: collapse;
 }
 .inetrest-table th {
   font-size:8px;
   background:#F2F3F5;
   padding:3.5px;
+  border-top:1px solid #ADB6BD;
 }
 .inetrest-table td {
   font-size:8px;
   text-align:center;
+  border-bottom:1px solid #E8ECEF;
 }
 .inetrest-table td:nth-child(2) {
   text-align:left;
@@ -3676,7 +3463,7 @@ article > .editButton:hover {
 .news-list-ul .news-date-group-title {
   color: #495056;
   margin-bottom: 3px;
-  margin-top: 8px;
+  margin-top: 5px;
   font-size: 14px;
 }
 .news-list-ul .news-date-group-list {
@@ -3694,4 +3481,234 @@ article > .editButton:hover {
   line-height: 1.6;
   list-style-type: none;
   color:#858E95;
+}
+
+/* 키워드 범례 스타일 */
+.keyword-legend-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 8px;
+  padding:10px 0;
+  width:40px;
+}
+.keyword-legend-item {
+  display: flex;
+  align-items: center;
+  font-size: 7px;
+  line-height: 1;
+}
+.keyword-legend-dot {
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  margin-right: 6px;
+}
+.keyword-legend-dot.dot-time { background: #FFC9A9; }
+.keyword-legend-dot.dot-place { background: #F7A9A9; }
+.keyword-legend-dot.dot-situation { background: #FFE1A9; }
+.keyword-legend-dot.dot-person { background: #FFC979; }
+.keyword-legend-dot.dot-group { background: #B9F2EA; }
+.keyword-legend-dot.dot-product { background: #4AB88D; }
+.keyword-legend-dot.dot-brand { background: #3DBB9B; }
+.keyword-legend-dot.dot-issue { background: #7DD6F7; }
+.keyword-legend-dot.dot-culture { background: #A9E6F7; }
+.keyword-legend-dot.dot-nature { background: #A9B7F7; }
+.keyword-legend-dot.dot-daily { background: #C9A9F7; }
+.keyword-legend-dot.dot-attribute { background: #D1A9F7; }
+
+/* 굽네 회사개요(2025년 1분기) 커스텀 스타일 - 직접 작성용 */
+.company-section {
+  border-top:1px solid var(--primary);
+}
+.company-title {}
+.company-title.goobne-bg {}
+.company-info-table {
+}
+.company-info-row {
+  display:flex;
+  justify-content:flex-start;
+  gap:10px;
+}
+.company-info-label {
+  border-bottom:1px solid var(--primary);
+  color:var(--primary);
+  padding:10px 5px 10px 10px;
+  font-weight:600;
+  min-width:100px;
+  width:100px;
+  display:flex;
+  justify-content:flex-start;
+  align-items:center;
+}
+.company-info-value {
+  display:flex;
+  justify-content:flex-start;
+  align-items:center;
+  width:100%;
+  border-bottom:1px solid #DEE1E6;
+}
+.add-dot {
+  position:relative;
+}
+.add-dot:before {
+  content:'';
+  display:inline-block;
+  width:3px;
+  height:3px;
+  border-radius:50%;
+  background:#495056;
+  margin-right:5px;
+  position:relative;
+  top:-2px;
+}
+.company-info-list {
+  list-style-type: none;
+  padding:10px 0;
+}
+.company-info-list li {}
+.company-sales-table {
+  padding:12px;
+  border:1px solid #DEE1E6;
+  border-collapse: collapse;
+  width:100%;
+  margin-top:12px;
+  margin-bottom:12px;
+  font-size:12px;
+  text-align:center;
+}
+.company-sales-table th {
+  border:1px solid #DEE1E6;
+  background-color: #F6F6F4;
+}
+.company-sales-table td {
+  border:1px solid #DEE1E6;
+}
+.company-sales-total td {}
+.company-swot-wrap {}
+.company-swot-item {
+  display:flex;
+  justify-content:flex-start;
+  gap:10px;
+}
+.company-swot-item .swot-label {
+  border-bottom:1px solid var(--primary);
+  color:var(--primary);
+  padding:10px 5px 10px 10px;
+  font-weight:600;
+  min-width:100px;
+  width:100px;
+  display:flex;
+  justify-content:flex-start;
+  align-items:center;
+  padding:20px 10px;
+}
+
+.company-swot-item span {
+  width:24px;
+  height:24px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  border-radius:50%;
+  background-color:var(--primary);
+  color:white;
+  font-size:14px;
+  font-weight:600;
+  margin-left:10px;
+}
+.company-swot-wrap li {
+  list-style-type: none;
+}
+.swot-label.swot-w-label span {
+  background:#FFB448;
+}
+.swot-label.swot-o-label span {
+  background:#4AB88D;
+}
+.swot-label.swot-t-label span {
+  background:#495056;
+}
+.company-swot-item ul {
+  border-bottom:1px solid #DEE1E6;
+  width:100%;
+  padding:12px 0;
+}
+
+/* Premium Competition Table Classes */
+.premium-competition-table {
+  margin-top:20px;
+  border-top:1px solid var(--primary);
+}
+
+.competition-header-section {
+}
+
+.competition-title-row {
+  display:flex;
+  justify-content:space-between;
+  gap:10px;
+}
+
+.competition-subtitle-row {
+}
+
+.competition-column {
+}
+.title-column {
+  color:var(--primary);
+  font-weight:600;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  width:100%;
+  padding:10px 0;
+  border-bottom:1px solid var(--primary);
+}
+
+.competition-table-wrap {
+  margin-top:10px;
+}
+.competition-table {
+  width:100%;
+  border-collapse: collapse;
+}
+.competition-table thead {}
+.competition-table tbody {}
+.competition-table tr {}
+.competition-table th {}
+.competition-table td {
+  border-bottom:1px solid #DEE1E6;
+  padding:10px 5px;
+}
+.col-no {}
+.col-title {}
+.orange-bg {
+  background-color:#FDE8DE;
+  color:var(--primary);
+  font-weight:600;
+  padding:10px 5px;
+}
+.green-bg {
+  background-color:#E4F4EE;
+  color:#4AB88D;
+  font-weight:600;
+  padding:10px 5px;
+}
+.competition-table-flex{
+  display:flex;
+  justify-content:space-between;
+  gap:10px;
+}
+.competition-table-block{
+  width:50%;
+  text-align:center;
+}
+.competition-table-title {
+  padding:10px 0;
+  color:var(--primary);
+  font-weight:600;
+  border-bottom:1px solid var(--primary);
+  margin-bottom:10px;
 }

@@ -141,9 +141,9 @@ export default function HighlightedLineChart() {
           drawBorder: false,
         },
         ticks: {
-          color: '#BDBDBD',
+          color: '#858E95',
           font: {
-            size: 12,
+            size: 8,
           },
         },
       },
@@ -158,9 +158,9 @@ export default function HighlightedLineChart() {
           drawBorder: false,
         },
         ticks: {
-          color: '#BDBDBD',
+          color: '#858E95',
           font: {
-            size: 12,
+            size: 8,
           },
           stepSize: 200,
         },
@@ -178,7 +178,7 @@ export default function HighlightedLineChart() {
       point: {
         hoverRadius: 4,
         radius: 4,
-        borderWidth: 0,
+        borderWidth: 0, 
       },
       line: {
         borderWidth: 2,
@@ -188,7 +188,7 @@ export default function HighlightedLineChart() {
   };
 
   return (
-    <div style={{ width: '100%', height: '250px', background: 'white' }}>
+    <div style={{ width: '100%', height: '178px', background: 'white' }}>
       <Line data={data} options={options} />
     </div>
   );
